@@ -23,4 +23,4 @@ form.tsx (file)
 If anything else is needed feel free to contatct me:
 
 - Email: tomas.sedurskas@gmail.com
-- LinkedInL https://www.linkedin.com/in/tomas-sedurskas
+- LinkedIn: https://www.linkedin.com/in/tomas-sedurskas
