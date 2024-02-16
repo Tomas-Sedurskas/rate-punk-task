@@ -1,0 +1,90 @@
+@import "@/styles/mixins";
+@import "@/styles/colors";
+
+.navbar {
+  background-color: $bg-primary;
+  border-bottom: 1px solid $border-primary;
+  position: fixed;
+  width: 100%;
+
+  &__container {
+    @include container-centered;
+    @include flex-row;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 15;
+    position: relative;
+
+    @include mobile() {
+      padding: 0px 16px;
+    }
+  }
+
+  &__logo {
+    padding: 24px 0;
+    z-index: 20;
+
+    @include mobile() {
+      padding: 12px 0;
+    }
+  }
+
+  &__burger__button {
+    display: none;
+    padding: 8px;
+    background: none;
+    line-height: 0;
+    border: none;
+    cursor: pointer;
+    z-index: 20;
+
+    @include mobile() {
+      display: block;
+    }
+  }
+
+  &__menu {
+    @include flex-row;
+    height: 100%;
+    gap: 4px;
+
+    @include mobile() {
+      @include flex-col;
+      position: absolute;
+      z-index: 10;
+      top: -100vh;
+      left: 0;
+      right: 0;
+      height: 100vh;
+      background-color: $bg-primary;
+      box-sizing: border-box;
+      padding: 64px 0px;
+      transition: all 0.25s ease-in-out;
+    }
+
+    &__open {
+      top: 0px;
+    }
+
+    &__link {
+      color: $text-secondary;
+      padding: 10px 16px;
+      text-decoration: none;
+      font-size: 1.25rem;
+
+      @include mobile() {
+        font-size: 1rem;
+      }
+
+      //This style is only here because
+      //there's no real navigation to highlight the active page
+      &:first-child {
+        color: $color-primary;
+      }
+    }
+  }
+}
+
+.hide {
+  display: none;
+}

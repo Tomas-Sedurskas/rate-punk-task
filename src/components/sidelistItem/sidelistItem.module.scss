@@ -1,0 +1,39 @@
+@import "@/styles/mixins";
+@import "@/styles/colors";
+
+.item {
+  @include flex-row;
+  gap: 48px;
+  align-items: center;
+
+  @include mobile() {
+    @include flex-col;
+    text-align: center;
+    gap: 24px;
+  }
+
+  &__reverse {
+    @include flex-row;
+    gap: 48px;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 24px;
+
+    @include mobile() {
+      @include flex-col;
+      text-align: center;
+    }
+  }
+
+  &__content {
+    @include flex-col;
+    gap: 16px;
+
+    span {
+      text-transform: uppercase;
+      color: $color-primary;
+      font-size: 1.25rem;
+      font-weight: bold;
+    }
+  }
+}

@@ -1,0 +1,112 @@
+@import "@/styles/mixins";
+@import "@/styles/colors";
+
+.footer {
+  background-color: $bg-primary;
+  padding: 64px 64px 58px 64px;
+  @include mobile() {
+    padding: 48px 32px;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    letter-spacing: 1.6px;
+  }
+
+  &__container {
+    @include container-centered;
+    @include flex-row;
+    gap: 128px;
+
+    @include mobile() {
+      @include flex-col;
+      gap: 48px;
+    }
+  }
+
+  &__info {
+    @include flex-col;
+    gap: 32px;
+  }
+
+  &__description {
+    font-size: 1rem;
+  }
+
+  &__copyright {
+    font-size: 1rem;
+    color: $text-primary-muted;
+    @include mobile() {
+      display: none;
+    }
+
+    &__mobile {
+      display: none;
+      font-size: 1rem;
+      color: $text-primary-muted;
+
+      @include mobile() {
+        display: block;
+        margin-top: 48px;
+      }
+    }
+  }
+
+  &__column {
+    @include flex-col;
+    white-space: nowrap;
+    gap: 24px;
+  }
+
+  &__sidecolumn {
+    @include flex-col;
+    gap: 64px;
+  }
+
+  &__quicklinks {
+    @include flex-col;
+    white-space: nowrap;
+    gap: 16px;
+
+    &__link {
+      color: $text-primary;
+      text-decoration: none;
+
+      //This style is only here because
+      //there's no real navigation to highlight the active page
+      &:first-child {
+        color: $color-primary;
+      }
+    }
+  }
+
+  &__contact {
+    @include flex-row;
+    gap: 16px;
+    align-items: center;
+
+    &__link {
+      color: $text-primary;
+      text-decoration: none;
+      font-style: normal;
+    }
+  }
+
+  &__social {
+    @include flex-row;
+    gap: 8px;
+
+    &__link {
+      background-color: $color-primary;
+      border: 1px solid $border-primary;
+      border-radius: 8px;
+      padding: 8px;
+      line-height: 0;
+      transition: background-color 0.2s ease-in-out;
+
+      &:hover {
+        background-color: $color-secondary;
+      }
+    }
+  }
+}

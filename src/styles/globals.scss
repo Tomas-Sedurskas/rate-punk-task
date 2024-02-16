@@ -1,0 +1,52 @@
+@import "@/styles/colors";
+@import "@/styles/mixins";
+
+body {
+  margin: 0;
+  font-size: 16px;
+  color: $text-primary;
+}
+
+h1 {
+  font-size: 3rem;
+  line-height: 4.5rem;
+  text-transform: uppercase;
+  margin: 0;
+
+  @include mobile() {
+    font-size: 2rem;
+    line-height: 3rem;
+  }
+}
+
+h2 {
+  margin: 0;
+  font-size: 2rem;
+  line-height: 3rem;
+  text-transform: uppercase;
+
+  @include mobile() {
+    line-height: 2.5rem;
+  }
+}
+
+h3 {
+  margin: 0;
+  font-size: 1.25rem;
+
+  @include mobile() {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
+p {
+  font-size: 1.25rem;
+  line-height: 2rem;
+  margin: 0;
+
+  @include mobile() {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}

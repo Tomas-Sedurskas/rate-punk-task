@@ -1,6 +1,9 @@
-import { Inter } from "next/font/google";
+import { Noto_Sans } from "next/font/google";
+import { Navbar } from "@/components/navbar/navbar";
+import { Footer } from "@/components/footer/footer";
+import "@/styles/globals.scss";
 
-const inter = Inter({ subsets: ["latin"] });
+const notoSans = Noto_Sans({ subsets: ["latin"] });
 
 export default function RootLayout({
   children,
@@ -9,7 +12,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={notoSans.className}>
+        <Navbar />
+        <>{children}</>
+        <Footer />
+      </body>
     </html>
   );
 }
