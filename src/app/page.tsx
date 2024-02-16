@@ -15,8 +15,8 @@ export default function Home() {
             Refer friends and get rewards
           </h1>
           <p className={styles.hero__card__paragraph}>
-            Refer your friends to us and earn hotel booking vouchers. We'll give
-            you 1 coin for each friend that installs our extension. Minimum
+            Refer your friends to us and earn hotel booking vouchers. We&apos;ll
+            give you 1 coin for each friend that installs our extension. Minimum
             cash-out at 20 coins.
           </p>
           <Form />
